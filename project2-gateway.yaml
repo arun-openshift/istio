@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: project3-gateway
+  name: project2-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -16,18 +16,18 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: project3
+  name: project2
 spec:
   hosts:
   - "*"
   gateways:
-  - project3-gateway
+  - project2-gateway
   http:
   - match:
     - uri:
         exact: /getgreeting
     route:
     - destination:
-        host: project3
+        host: project2
         port:
           number: 80
