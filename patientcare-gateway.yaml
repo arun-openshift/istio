@@ -30,4 +30,4 @@ spec:
     - destination:
         host: project3
         port:
-          number: 8080
+          number: 80
